@@ -4,15 +4,8 @@ import psycopg2
 import pandas as pd
 
 # PostgreSQL connection
-conn = psycopg2.connect(
-    host="db.chkfigqudmcmpqawyixc.supabase.co",  # your Supabase host
-    database="postgres",                        # your database name (in Supabase it's usually postgres)
-    user="postgres",                            # your username (same)
-    password="Lafevibu007",        # your Supabase password (not anon key! the real password)
-    port="5432"                                 # port is 5432
-)
 
-
+>>>>>>> 0eb95930e9317eaeec023184869068641acb6955
 # Function to execute query
 def run_query(query, params=None):
     with conn.cursor() as cur:
