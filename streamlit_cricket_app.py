@@ -2,14 +2,6 @@
 import streamlit as st
 import psycopg2
 import pandas as pd
-import socket
-
-# PostgreSQL connection
-original_getaddrinfo = socket.getaddrinfo
-def get_ipv4_only(*args, **kwargs):
-    return [info for info in original_getaddrinfo(*args, **kwargs) if info[0] == socket.AF_INET]
-socket.getaddrinfo = get_ipv4_only
-
 
 try:
     conn = psycopg2.connect(
