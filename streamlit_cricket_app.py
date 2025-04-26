@@ -13,7 +13,7 @@ conn = psycopg2.connect(
     port=st.secrets["database"]["port"]
 )
 
->>>>>>> 0eb95930e9317eaeec023184869068641acb6955
+
 # Function to execute query
 def run_query(query, params=None):
     with conn.cursor() as cur:
