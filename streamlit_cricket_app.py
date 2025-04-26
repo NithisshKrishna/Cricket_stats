@@ -4,6 +4,11 @@ import psycopg2
 import pandas as pd
 
 # PostgreSQL connection
+original_getaddrinfo = socket.getaddrinfo
+def force_ipv4(*args, **kwargs):
+    return [ai for ai in original_getaddrinfo(*args, **kwargs) if ai[0] == socket.AF_INET]
+socket.getaddrinfo = force_ipv4
+
 
 try:
     conn = psycopg2.connect(
