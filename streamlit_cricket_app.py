@@ -6,9 +6,9 @@ import socket
 
 # PostgreSQL connection
 original_getaddrinfo = socket.getaddrinfo
-def force_ipv4(*args, **kwargs):
-    return [ai for ai in original_getaddrinfo(*args, **kwargs) if ai[0] == socket.AF_INET]
-socket.getaddrinfo = force_ipv4
+def get_ipv4_only(*args, **kwargs):
+    return [info for info in original_getaddrinfo(*args, **kwargs) if info[0] == socket.AF_INET]
+socket.getaddrinfo = get_ipv4_only
 
 
 try:
