@@ -5,6 +5,14 @@ import pandas as pd
 
 # PostgreSQL connection
 
+conn = psycopg2.connect(
+    host=st.secrets["database"]["host"],
+    database=st.secrets["database"]["database"],
+    user=st.secrets["database"]["user"],
+    password=st.secrets["database"]["password"],
+    port=st.secrets["database"]["port"]
+)
+
 >>>>>>> 0eb95930e9317eaeec023184869068641acb6955
 # Function to execute query
 def run_query(query, params=None):
