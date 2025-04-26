@@ -2,6 +2,7 @@
 import streamlit as st
 import psycopg2
 import pandas as pd
+import socket
 
 # PostgreSQL connection
 original_getaddrinfo = socket.getaddrinfo
