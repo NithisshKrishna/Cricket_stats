@@ -27,7 +27,7 @@ This project implements a relational database system for cricket statistics usin
 - Matches
 - Player_Stats
 
-**Folder Structure:**
+**Folder Structures:**
 - `create.sql` - Contains SQL commands to create all the necessary tables including RawStats and normalized tables.
 - `load.sql` - Contains COPY command to load data into RawStats from `final_.csv`, and SQL queries to insert and transform data into normalized tables.
 - `final_.csv` - The single CSV file containing all records.
