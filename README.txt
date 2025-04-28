@@ -19,6 +19,7 @@ This project implements a relational database system for cricket statistics usin
 - This file was loaded into a temporary staging table called `RawStats`.
 
 **Database Tables:**
+
 - RawStats (temporary staging table)
 - Match_Format
 - Teams
